@@ -3,7 +3,7 @@ name: Auto Merge Release to Main
 on:
   push:
     branches:
-      - release  # triggers on every push to release
+      - release/*  # triggers on every push to release
 
 jobs:
   merge:
