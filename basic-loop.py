@@ -24,5 +24,5 @@ for i in range(1,7):
     elif int(guess)>secret_number :
         print('Your guess is more than secret number')
     else :
-        print('Bingo! You guessed the number viz    : '+str(secret_number)+' in '+str(i)+' guesses')
+        print('Bingo! You guessed the number viz : '+str(secret_number)+' in '+str(i)+' guesses')
         break
