@@ -1,5 +1,6 @@
 import sys
-
+import logging
+logging.basicConfig(filename='basicLogging.txt' , level=logging.DEBUG,format='%(asctime)s - %(levelname)s - %(message)s')
 
 def box_print(symbol,height,width):
     if len(symbol) != 1 :
@@ -10,7 +11,7 @@ def box_print(symbol,height,width):
         raise Exception('The height is less than 2')
     print (symbol * width)
     for i in range (height-2):
-        print (symbol +(' ' * (width-2))+symbol)
+        print(symbol +(' ' * (width-2))+symbol)
     print(symbol * width)
 
 def box_print1 (symbol1,symbol2,height,width):
@@ -33,8 +34,8 @@ except Exception as err :
 
 ages = [16,10,13,4,50,25,17]
 ages.sort()
-print(ages)
+logging.debug(str(ages))
 assert ages[0]<=ages[-1]
-print('assert 1 success')
+logging.debug('assert 1 success')
 assert ages[0]>=ages[-1]
-print('assert 2 success')
+logging.debug('assert 2 success')
