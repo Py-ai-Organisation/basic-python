@@ -30,3 +30,11 @@ try:
     box_print1('-','|',5,10)
 except Exception as err :
     print('An exception happened.'+str(err))
+
+ages = [16,10,13,4,50,25,17]
+ages.sort()
+print(ages)
+assert ages[0]<=ages[-1]
+print('assert 1 success')
+assert ages[0]>=ages[-1]
+print('assert 2 success')
