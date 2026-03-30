@@ -1,7 +1,7 @@
 import sys
 import logging
 logging.basicConfig(filename='basicLogging.txt' , level=logging.DEBUG,format='%(asctime)s - %(levelname)s - %(message)s')
-
+logging.disable(logging.CRITICAL)
 def box_print(symbol,height,width):
     if len(symbol) != 1 :
         raise Exception('The length of symbol is not 1')
@@ -37,5 +37,7 @@ ages.sort()
 logging.debug(str(ages))
 assert ages[0]<=ages[-1]
 logging.debug('assert 1 success')
+logging.error('Critical message should likely skip')
+logging.error('assert 2 is going to fail')
 assert ages[0]>=ages[-1]
 logging.debug('assert 2 success')
